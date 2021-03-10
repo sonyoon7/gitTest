@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   console.log(process.env.env)
   console.log(req.app.get('env'))
   console.log('ssss')
-  res.send(env);
+  res.send(process.env.env);
 });
 
 module.exports = router;
