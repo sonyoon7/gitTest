@@ -17,8 +17,8 @@ module.exports = {
       repo : 'git@github.com:sonyoon7/gitTest.git',
       path : '/home/ubuntu/test',
       // 'pre-deploy-local': 'scp .env ubuntu@ec2-54-180-152-73.ap-northeast-2.compute.amazonaws.com:/home/ubuntu/gitTest/current/.env',
-      'post-setup': 'cd /home/ubuntu/test/current/',
-      'post-deploy' : 'sudo docker build -f .',
+      // 'post-setup': '',
+      'post-deploy' : 'cd /home/ubuntu/test/current/ && docker build .',
       // 'pre-setup': ''
     }
   }
