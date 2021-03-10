@@ -18,7 +18,7 @@ module.exports = {
       path : '/home/ubuntu/test',
       // 'pre-deploy-local': 'scp .env ubuntu@ec2-54-180-152-73.ap-northeast-2.compute.amazonaws.com:/home/ubuntu/gitTest/current/.env',
       // 'post-setup': '',
-      'post-deploy' : 'cd /home/ubuntu/test/current/ && docker build .',
+      'post-deploy' : 'cd /home/ubuntu/test/current/ && docker build . -t mine',
       // 'pre-setup': ''
     }
   }
