@@ -7,15 +7,19 @@ var dotenv = require('dotenv')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-process.env.NODE_ENV = "dev"
+// process.env.NODE_ENV = "dev"
 var app = express();
 if (process.env.NODE_ENV === "test") {
-  dotenv.config({path: path.join(__dirname, '.env.test' )})
+  // dotenv.config({path: path.join(__dirname, '.env.test' )})
   env = "테스트환경";
-} else if (process.env.NODE_ENV === "dev") {
-  dotenv.config({path: path.join(__dirname, '.env.dev' )})
+} else if (process.env.NODE_ENV === "development") {
+  // dotenv.config({path: path.join(__dirname, '.env.dev' )})
   env = "개발환경";
+}else if (process.env.NODE_ENV === "production") {
+  // dotenv.config({path: path.join(__dirname, '.env.dev' )})
+  env = "운영환경";
 }
+console.log(process.env.NODE_ENV)
 
 app.use(logger('dev'));
 app.use(express.json());
